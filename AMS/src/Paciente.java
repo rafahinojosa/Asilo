@@ -8,6 +8,8 @@ public class Paciente {
 	private int sexo;
 	private String sangre;
 	
+	//Agregar el resto de los parametros
+	
 	
 	public Paciente() {
 		nombre ="Fulano";
@@ -20,12 +22,11 @@ public class Paciente {
 		nombre = n;
 		fecha = f;
 		sexo = sex;
+		// Agregar el resto de los parametros
 	}
 	
-	public String toString() {
-		return nombre + "\n" + fecha + "\n" + sexo + "\n";
-	}
 	
+	//Ya que se agreguen los otros parametros agregar setters y getters (Eclipse lo puede hacer solo)
 	public String getNombre() {
 		return nombre;
 	}
@@ -48,5 +49,8 @@ public class Paciente {
 
 	public void setSexo(int sexo) {
 		this.sexo = sexo;
+	}
+	public String toString() {
+		return nombre + "\n" + fecha + "\n" + sexo + "\n";
 	}
 }

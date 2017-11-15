@@ -1,4 +1,5 @@
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
@@ -12,7 +13,8 @@ public class ListaPacientesView extends JPanel
 	private JFrame controllingFrame;
 	PacientesDB pdb = new PacientesDB();
 	int numPacientes = pdb.getSize();
-	Vector<Paciente> pacientVector = pdb.getElements(); 
+	Vector<Paciente> pacientVector = pdb.pacientVector; 
+	
 	
 	public ListaPacientesView(JFrame f) {
 		controllingFrame = f;
