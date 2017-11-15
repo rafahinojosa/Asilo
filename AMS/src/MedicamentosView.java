@@ -5,10 +5,11 @@ import java.util.Arrays;
 
 
 public class MedicamentosView extends JPanel
+
 							implements ActionListener {
+	
 	private static String ALTA = "alta";
 	private static String VER = "ver";
-	
 	private static String VOLVER = "volver";
 
 	private JFrame controllingFrame;
@@ -23,17 +24,22 @@ public class MedicamentosView extends JPanel
 	}
 	
 	protected JComponent createButtonPanel() {
+		
 		JPanel p = new JPanel(new GridLayout(2,2));
 		JButton altaButton = new JButton("Alta de medicamento");
 		JButton verButton = new JButton("Ver Inventario");
+		JButton volverButton = new JButton("volver");
 		
 		altaButton.setActionCommand(ALTA);
 		verButton.setActionCommand(VER);
+		
 		altaButton.addActionListener(this);
 		verButton.addActionListener(this);
+		volverButton.addActionListener(this);
 		
 		p.add(altaButton);
 		p.add(verButton);
+		p.add(volverButton);
 		
 		return p;
 		
@@ -70,6 +76,13 @@ public class MedicamentosView extends JPanel
 			listaFrame.setSize(600, 400);
 			listaFrame.setVisible(true);
 			break;
+			
+		case "volver":
+		
+		MenuPrincipalView aux = new MenuPrincipalView(controllingFrame);
+		controllingFrame.setContentPane(aux);
+		controllingFrame.setVisible(true);
+			
 		default:
 			break;
 			
