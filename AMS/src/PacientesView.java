@@ -5,7 +5,9 @@ import java.util.Arrays;
 
 
 public class PacientesView extends JPanel
+
 							implements ActionListener {
+	
 	private static String ALTA = "alta";
 	private static String VER = "ver";
 	private static String SUCESO = "suceso";
@@ -15,6 +17,7 @@ public class PacientesView extends JPanel
 	private JFrame controllingFrame;
 
 	public PacientesView(JFrame f) {
+		
 		controllingFrame = f;
 		
 		JComponent buttonPane = createButtonPanel();
@@ -24,25 +27,31 @@ public class PacientesView extends JPanel
 	}
 	
 	protected JComponent createButtonPanel() {
+		
 		JPanel p = new JPanel(new GridLayout(2,2));
 		JButton altaButton = new JButton("Alta de paciente");
 		JButton verButton = new JButton("Ver pacientes");
 		JButton sucButton = new JButton("Agregar Suceso");
 		JButton notaButton = new JButton("Agregar Nota");
+		JButton volverButton = new JButton("volver");
 		
 		altaButton.setActionCommand(ALTA);
 		verButton.setActionCommand(VER);
 		sucButton.setActionCommand(SUCESO);
 		notaButton.setActionCommand(NOTA);
+		volverButton.setActionCommand(VOLVER);
+		
 		altaButton.addActionListener(this);
 		verButton.addActionListener(this);
 		sucButton.addActionListener(this);
 		notaButton.addActionListener(this);
+		volverButton.addActionListener(this);
 		
 		p.add(altaButton);
 		p.add(verButton);
 		p.add(sucButton);
 		p.add(notaButton);
+		p.add(volverButton);
 		
 		return p;
 		
@@ -91,6 +100,14 @@ public class PacientesView extends JPanel
 //			JOptionPane.showMessageDialog(controllingFrame, notif);
 	        
 			break;
+			
+		case "volver":
+			
+			
+			MenuPrincipalView aux = new MenuPrincipalView(controllingFrame);
+			controllingFrame.setContentPane(aux);
+			controllingFrame.setVisible(true);
+			
 		default:
 			break;
 			
