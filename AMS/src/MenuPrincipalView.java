@@ -5,7 +5,9 @@ import java.io.IOException;
 
 
 public class MenuPrincipalView extends JPanel
+
 							implements ActionListener {
+	
 	private static String PACIENTES = "Pacientes";
 	private static String MEDICAMENTOS = "Medicamentos";
 	private static String ZONAS = "Zonas";
@@ -16,6 +18,7 @@ public class MenuPrincipalView extends JPanel
 	private JFrame controllingFrame;
 
 	public MenuPrincipalView(JFrame f) {
+		
 		controllingFrame = f;
 		
 		JComponent buttonPane = createButtonPanel();

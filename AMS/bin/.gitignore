@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /ListaPacientesView$1.class
 /Nota.class
 /EmptyTable.class
@@ -9,3 +10,29 @@
 /Medicamento.class
 /Medicamentos.class
 /Responsable.class
+=======
+/AltaEnfermerasView$1.class
+/AltaEnfermerasView.class
+/AltaMedicamentoView$1.class
+/AltaMedicamentoView.class
+/AltaPacientesView$1.class
+/AltaPacientesView.class
+/EnfermerasView.class
+/InventarioMedicamentosView$1.class
+/InventarioMedicamentosView.class
+/ListaEnfermerasView$1.class
+/ListaEnfermerasView.class
+/ListaPacientesView$1.class
+/ListaPacientesView.class
+/LogInView$1.class
+/LogInView$2.class
+/LogInView.class
+/MedicamentosView.class
+/MenuPrincipalView$1.class
+/MenuPrincipalView.class
+/Notifications.class
+/Paciente.class
+/PacientesDB.class
+/PacientesView.class
+/Start.class
+>>>>>>> origin/master

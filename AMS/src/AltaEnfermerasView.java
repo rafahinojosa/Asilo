@@ -6,16 +6,25 @@ import java.util.Arrays;
 
 
 public class AltaEnfermerasView extends JPanel
-							implements ActionListener {
 
+implements ActionListener {
+
+	//Declaracón de atributo
 	private JFrame controllingFrame;
+	
+	//Text Fields
 	JTextField nameText;
 	JTextField dateText;
-	JComboBox sexBox;
+	JTextField direcText;
 	
+	//Combo box
+	JComboBox sexBox;
+	JComboBox dormitorioBox;
 	public AltaEnfermerasView(JFrame f) {
+		
 		controllingFrame = f;
 		
+		//Nombre de la enfermera
 		JPanel namePane = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		nameText = new JTextField(20);
 		JLabel nameLabel = new JLabel("Nombre: ");
@@ -24,6 +33,7 @@ public class AltaEnfermerasView extends JPanel
 		namePane.add(nameLabel);
 		namePane.add(nameText);
 		
+		//Fecha de nacimiento de la enfermera
 		JPanel datePane = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		dateText = new JTextField(10);
 		JLabel dateLabel = new JLabel("Fecha de nacimiento");
@@ -32,6 +42,7 @@ public class AltaEnfermerasView extends JPanel
 		datePane.add(dateLabel);
 		datePane.add(dateText);
 		
+		//Genero de enfermera/o
 		String[] gender = {"hombre", "mujer"};
 		JPanel sexPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		sexBox = new JComboBox(gender);
@@ -41,6 +52,25 @@ public class AltaEnfermerasView extends JPanel
 		sexPane.add(sexLabel);
 		sexPane.add(sexBox);
 		
+		//Dirección
+		JPanel direcPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
+		direcText = new JTextField(9);
+		JLabel direcLabel = new JLabel("Dirección: ");
+				
+		direcLabel.setLabelFor(direcText);
+		direcPane.add(direcLabel);
+		direcPane.add(direcText);
+		
+		//Zona en donde se encuentra el paciente
+		String[] dormitorio = {"Hospital", "Dormitorio 1", "Dormitorio 2"};
+		JPanel dormitorioPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
+		dormitorioBox = new JComboBox(dormitorio);
+		JLabel dormitorioLabel = new JLabel("Zona:");
+		
+		dormitorioLabel.setLabelFor(dateText);
+		dormitorioPane.add(dormitorioLabel);
+		dormitorioPane.add(dormitorioBox);
+		
 		JComponent buttonPane = createButtonPanel();
 		
 		
@@ -48,6 +78,8 @@ public class AltaEnfermerasView extends JPanel
 		add(namePane);
 		add(datePane);
 		add(sexPane);
+		add(direcPane);
+		add(dormitorioPane);
 		add(buttonPane);
 	}
 	
@@ -81,25 +113,40 @@ public class AltaEnfermerasView extends JPanel
 			int sexo = -1;
 			
 			if(nameText.getText().equals("")) {
+				
 				error = error.concat("Nombre vacío! \n");
-			} else {
+			} 
+			else {
+				
 				nombre = nameText.getText();
 			}
+			
 			if (dateText.getText().equals("")) {
+				
 				error = error.concat("Fecha incorrecta");
-			} else {
+			} 
+			else {
+				
 				fecha = (dateText.getText());
 			}
+			
 			sexo = sexBox.getSelectedIndex();
 			
-			if (!error.equals("")) {
+			if (!error.equals("")) 
+			{
 				JOptionPane.showMessageDialog(controllingFrame, error);
-			} else {
+			}
+			else {
+				
 				Paciente p = new Paciente(nombre, fecha, sexo);
 				PacientesDB pDB = new PacientesDB();
+				
 				try {
+					
 					pDB.addPaciente(p);
-				} catch (IOException e1) {
+				} 
+				catch (IOException e1) {
+					
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -107,13 +154,8 @@ public class AltaEnfermerasView extends JPanel
 			}
 		}
 		
-		
-		
 		if (cmd.equals("back"))
 			controllingFrame.dispose();
-			
-		
-			
 	}
 	
 	
