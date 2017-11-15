@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+/ListaPacientesView$1.class
+/Nota.class
+/EmptyTable.class
+/Zona.class
+/Enfermera.class
+/Padecimiento.class
+/Operacion.class
+/Suceso.class
+/Medicamento.class
+/Medicamentos.class
+/Responsable.class
+=======
 /AltaEnfermerasView$1.class
 /AltaEnfermerasView.class
 /AltaMedicamentoView$1.class
@@ -22,3 +35,4 @@
 /PacientesDB.class
 /PacientesView.class
 /Start.class
+>>>>>>> origin/master

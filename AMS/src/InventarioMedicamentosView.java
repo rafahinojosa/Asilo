@@ -12,7 +12,7 @@ public class InventarioMedicamentosView extends JPanel
 	private JFrame controllingFrame;
 	PacientesDB pdb = new PacientesDB();
 	int numPacientes = pdb.getSize();
-	Vector<Paciente> pacientVector = pdb.getElements(); 
+	Vector<Paciente> pacientVector = pdb.pacientVector; 
 	
 	public InventarioMedicamentosView(JFrame f) {
 		controllingFrame = f;

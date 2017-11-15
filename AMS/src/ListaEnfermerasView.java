@@ -12,7 +12,7 @@ public class ListaEnfermerasView extends JPanel
 	private JFrame controllingFrame;
 	PacientesDB pdb = new PacientesDB();
 	int numPacientes = pdb.getSize();
-	Vector<Paciente> pacientVector = pdb.getElements(); 
+	Vector<Paciente> pacientVector = pdb.pacientVector; 
 	
 	public ListaEnfermerasView(JFrame f) {
 		controllingFrame = f;
