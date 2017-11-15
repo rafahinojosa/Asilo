@@ -14,7 +14,7 @@ public class DBEnfermera {
 		
 	}
 	
-	public void addEnfermera(Enfermera e) {
+	public void addEnfermera(Enfermera enf) {
 	try {
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("Driver loaded!");
@@ -41,7 +41,9 @@ public class DBEnfermera {
 			st.executeUpdate (
 
 					"insert INTO enfermera (nombre, fechaNacimiento, direccion, sexo, zonaAsignada) "
-							+ "VALUES ('Dora Dominguez', '19880720', 'Privada X 193', 1, 2)");
+							+ "Values ('" +enf.getNombre() +"', '" + enf.getBirthdate() +"', '"
+							+ enf.getDireccion() + "', '" + enf.getSexo() + "', '" + enf.getZonaAsignada() +")");
+			//		+ "VALUES ('Dora Dominguez', '19880720', 'Privada X 193', 1, 2)");
 			st.close();
 		}
 		catch (Exception e)
