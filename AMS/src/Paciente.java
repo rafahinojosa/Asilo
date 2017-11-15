@@ -24,14 +24,7 @@ public class Paciente {
 		sexo = sex;
 		// Agregar el resto de los parametros
 	}
-	
-<<<<<<< HEAD
-	public String toString() {
-		
-		return nombre + "\n" + fecha + "\n" + sexo + "\n";
-	}
-=======
->>>>>>> 0e318dc0f24c7438269a8c4cf0b83a48342d5c27
+
 	
 	//Ya que se agreguen los otros parametros agregar setters y getters (Eclipse lo puede hacer solo)
 	public String getNombre() {

@@ -14,14 +14,12 @@ implements ActionListener {
 	
 	//Text Field
 	JTextField nameText;
-	JTextField medicamentoText;
 	JTextField cantidadText;
-	JTextField entregaText;
-	JTextField dosisText;
+	JTextField provedorText;
 	
-	public AltaMedicamentoView(JFrame f) {
+	public AltaMedicamentoView(JFrame frame_input) {
 		
-		controllingFrame = f;
+		controllingFrame = frame_input;
 		
 		//Nombre del medicamento
 		JPanel namePane = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -32,51 +30,31 @@ implements ActionListener {
 		namePane.add(nameLabel);
 		namePane.add(nameText);
 		
-		//Cantidad(gramos)
-		JPanel medicamentoPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		medicamentoText = new JTextField(20);
-		JLabel medicamentoLabel = new JLabel("Cantidad(gramos): ");
-		medicamentoLabel.setLabelFor(nameText);
-		
-		medicamentoPane.add(medicamentoLabel);
-		medicamentoPane.add(medicamentoText);
-		
-		//Cantidad de tabletas
+		//Cantidad del medicamento
 		JPanel cantidadPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		cantidadText = new JTextField(10);
-		JLabel cantidadLabel = new JLabel("Cantidad de tabletas: ");
-		cantidadLabel.setLabelFor(nameText);
-
+		cantidadText = new JTextField(20);
+		JLabel cantidadLabel = new JLabel("Numero de tabletas");
+		cantidadLabel.setLabelFor(cantidadText);
+		
 		cantidadPane.add(cantidadLabel);
 		cantidadPane.add(cantidadText);
-
-		//Cantidad de tabletas
-		JPanel entregaPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		entregaText = new JTextField(20);
-		JLabel entregaLabel = new JLabel("Entregado por: ");
-		entregaLabel.setLabelFor(nameText);
-
-		entregaPane.add(entregaLabel);
-		entregaPane.add(entregaText);
 		
-		//Dosis
-		JPanel dosisPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		dosisText = new JTextField(20);
-		JLabel dosisLabel = new JLabel("Dosis: ");
-		dosisLabel.setLabelFor(nameText);
-
-		dosisPane.add(dosisLabel);
-		dosisPane.add(dosisText);
+		//Provedor del medicamento
+		JPanel provedorPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
+		provedorText = new JTextField(20);
+		JLabel provedorLabel = new JLabel("Numero de tabletas");
+		provedorLabel.setLabelFor(provedorText);
+				
+		provedorPane.add(provedorLabel);
+		provedorPane.add(provedorText);
 		
 		JComponent buttonPane = createButtonPanel();
 		
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		add(namePane);
-		add(medicamentoPane);
 		add(cantidadPane);
-		add(entregaPane);
-		add(dosisPane);
+		add(provedorPane);
 		add(buttonPane);
 	}
 	
@@ -106,11 +84,10 @@ implements ActionListener {
 			
 			String sError = "";
 			String sNombre = "";
-			String sMedicamento = "";
-			String sCantidad = "";
-			String sEntrega = "";
-			String sDosis = "";
-
+			int iD = 0;
+			int iCantidad = 0;
+			String sProvedor = "";
+			
 			if(nameText.getText().equals("")) {
 				
 				sError = sError.concat("Nombre vacío! \n");
@@ -121,74 +98,55 @@ implements ActionListener {
 				sNombre = nameText.getText();
 			}
 			
-			if (medicamentoText.getText().equals("")) {
-				
-				sMedicamento = sMedicamento.concat("Nombre vacío! \n");
-			}
-			else {
-
-				sMedicamento = medicamentoText.getText();
-			}
-			
 			if (cantidadText.getText().equals("")) {
 
-				sCantidad = sCantidad.concat("Nombre vacío! \n");
+				iCantidad = 0;
 			}
 			else {
 
-				sCantidad = sCantidad.getText();
+				iCantidad = Integer.parseInt(cantidadText.getText());
 			}
-
-			if (entregaText.getText().equals("")) {
-
-				sEntrega = sEntrega.concat("Nombre vacío! \n");
-			}
-			else {
-
-				sEntrega = sEntrega.getText();
-			}
-
-			if (dosisText.getText().equals("")) {
-
-				sDosis = sDosis.concat("Nombre vacío! \n");
-			}
-			else {
-
-				sDosis = sDosis.getText();
-			}
-
-
-			if (!error.equals("")) {
+			
+			if(provedorText.getText().equals("")) {
 				
-				JOptionPane.showMessageDialog(controllingFrame, error);
+				sProvedor = sProvedor.concat("Provedor vacío! \n");
+			}
+			else {
+				
+				sProvedor = provedorText.getText();
+			}
+			
+
+			if (!sError.equals("")) {
+				
+				JOptionPane.showMessageDialog(controllingFrame, sError);
 			} 
-			else {
+
+			/*else {
 				
-				Paciente p = new Paciente(nombre, fecha, sexo);
-				PacientesDB pDB = new PacientesDB();
+				//Medicamentos medicamento_1 = new Medicamentos(iD, sNombre, iCantidad, sProvedor);
+				//PacientesDB pDB = new PacientesDB();
 				
-				try {
+				/*try {
 					
-					pDB.addPaciente(p);
+					//pDB.addPaciente(medicamento_1);
 				} 
-				catch (IOException e1) {
+				/*catch (IOException e1) {
 					
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				controllingFrame.dispose();
 			}
+			*/
 		}
 		
 		
-		
+		/*
 		if (cmd.equals("back"))
 			controllingFrame.dispose();
-
-		
-
-	}
-	
+		}
+		 */
 	
 	private static void createAndShowGUI() {
 		
@@ -216,5 +174,4 @@ implements ActionListener {
 			}
 		});
 	}
-	
 }

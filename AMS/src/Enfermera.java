@@ -15,6 +15,7 @@ public class Enfermera {
 	}
 
 	public Enfermera(String nombre, String id, Date birthdate, String direccion, int sexo, int zonaAsignada) {
+		
 		super();
 		this.nombre = nombre;
 		this.id = id;
@@ -26,14 +27,17 @@ public class Enfermera {
 	}
 
 	public String getNombre() {
+		
 		return nombre;
 	}
 
 	public void setNombre(String nombre) {
+		
 		this.nombre = nombre;
 	}
 
 	public String getId() {
+		
 		return id;
 	}
 
@@ -42,34 +46,42 @@ public class Enfermera {
 	}
 
 	public Date getBirthdate() {
+		
 		return birthdate;
 	}
 
 	public void setBirthdate(Date birthdate) {
+		
 		this.birthdate = birthdate;
 	}
 
 	public String getDireccion() {
+		
 		return direccion;
 	}
 
 	public void setDireccion(String direccion) {
+		
 		this.direccion = direccion;
 	}
 
 	public int getSexo() {
+		
 		return sexo;
 	}
 
 	public void setSexo(int sexo) {
+		
 		this.sexo = sexo;
 	}
 
 	public int getZonaAsignada() {
+		
 		return zonaAsignada;
 	}
 
 	public void setZonaAsignada(int zonaAsignada) {
+		
 		this.zonaAsignada = zonaAsignada;
 	}
 

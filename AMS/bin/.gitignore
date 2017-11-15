@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-/ListaPacientesView$1.class
-/Nota.class
-/EmptyTable.class
-/Zona.class
-/Enfermera.class
-/Padecimiento.class
-/Operacion.class
-/Suceso.class
-/Medicamento.class
-/Medicamentos.class
-/Responsable.class
-=======
 /AltaEnfermerasView$1.class
 /AltaEnfermerasView.class
 /AltaMedicamentoView$1.class
 /AltaMedicamentoView.class
 /AltaPacientesView$1.class
 /AltaPacientesView.class
+/EmptyTable.class
+/Enfermera.class
 /EnfermerasView.class
 /InventarioMedicamentosView$1.class
 /InventarioMedicamentosView.class
@@ -27,12 +16,19 @@
 /LogInView$1.class
 /LogInView$2.class
 /LogInView.class
+/Medicamento.class
+/Medicamentos.class
 /MedicamentosView.class
 /MenuPrincipalView$1.class
 /MenuPrincipalView.class
+/Nota.class
 /Notifications.class
+/Operacion.class
 /Paciente.class
 /PacientesDB.class
 /PacientesView.class
+/Padecimiento.class
+/Responsable.class
 /Start.class
->>>>>>> origin/master
+/Suceso.class
+/Zona.class

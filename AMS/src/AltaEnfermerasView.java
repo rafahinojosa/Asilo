@@ -20,6 +20,7 @@ implements ActionListener {
 	//Combo box
 	JComboBox sexBox;
 	JComboBox dormitorioBox;
+	
 	public AltaEnfermerasView(JFrame f) {
 		
 		controllingFrame = f;
@@ -62,10 +63,10 @@ implements ActionListener {
 		direcPane.add(direcText);
 		
 		//Zona en donde se encuentra el paciente
-		String[] dormitorio = {"Hospital", "Dormitorio 1", "Dormitorio 2"};
+		String[] dormitorio = {"Zona 1", "Zona 2", "Zona 3"};
 		JPanel dormitorioPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		dormitorioBox = new JComboBox(dormitorio);
-		JLabel dormitorioLabel = new JLabel("Zona:");
+		JLabel dormitorioLabel = new JLabel("Zona asignada:");
 		
 		dormitorioLabel.setLabelFor(dateText);
 		dormitorioPane.add(dormitorioLabel);
@@ -84,6 +85,7 @@ implements ActionListener {
 	}
 	
 	protected JComponent createButtonPanel() {
+		
 		JPanel p = new JPanel(new GridLayout(0,2));
 		
 		JButton acceptButton = new JButton("Aceptar");
@@ -107,9 +109,11 @@ implements ActionListener {
 		
 		
 		if (cmd.equals("save")) {
+			
 			String error = "";
 			String nombre = "";
 			String fecha = "";
+			String direccion = "";
 			int sexo = -1;
 			
 			if(nameText.getText().equals("")) {
