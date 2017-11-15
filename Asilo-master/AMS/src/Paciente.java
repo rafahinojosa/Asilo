@@ -1,61 +1,115 @@
+import java.sql.Date;
 
 public class Paciente {
 	
 	private String nombre;
-	private String fecha;
+	private Date birthday;
+	private String direccion;
+	private int estado;
 	private int sexo;
-	private String sangre;
+	private String tipoDeSangre;
+	private int zonaAsignada;
+	private int camaAsignada;
+	private int notas;
 	
-	//Agregar el resto de los parametros
-	
-	
-	public Paciente() {
-		
-		nombre ="Fulano";
-		fecha = "01/01/01";
-		sexo = '0';
-		sangre = "O+";
-	}
-	
-	public Paciente(String n, String f, int sex) {
-		
-		nombre = n;
-		fecha = f;
-		sexo = sex;
-		// Agregar el resto de los parametros
-	}
-
-	
-	//Ya que se agreguen los otros parametros agregar setters y getters (Eclipse lo puede hacer solo)
 	public String getNombre() {
 		
 		return nombre;
 	}
-
 	public void setNombre(String nombre) {
 		
 		this.nombre = nombre;
 	}
-
-	public String getFecha() {
+	public Date getBirthday() {
 		
-		return fecha;
+		return birthday;
 	}
-
-	public void setFecha(String fecha) {
+	public void setBirthday(Date birthday) {
 		
-		this.fecha = fecha;
+		this.birthday = birthday;
 	}
-
+	public String getDireccion() {
+		
+		return direccion;
+	}
+	public void setDireccion(String direccion) {
+		
+		this.direccion = direccion;
+	}
+	public int getEstado() {
+		
+		return estado;
+	}
+	public void setEstado(int estado) {
+		
+		this.estado = estado;
+	}
+	
 	public int getSexo() {
 		
 		return sexo;
 	}
-
+	
 	public void setSexo(int sexo) {
+		
 		this.sexo = sexo;
 	}
-	public String toString() {
-		return nombre + "\n" + fecha + "\n" + sexo + "\n";
+	
+	public String getTipoDeSangre() {
+		
+		return tipoDeSangre;
 	}
-}
+	
+	public void setTipoDeSangre(String tipoDeSangre) {
+		
+		this.tipoDeSangre = tipoDeSangre;
+	}
+	
+	public int getZonaAsignada() {
+		
+		return zonaAsignada;
+	}
+	
+	public void setZonaAsignada(int zonaAsignada) {
+		
+		this.zonaAsignada = zonaAsignada;
+	}
+	
+	public int getCamaAsignada() {
+		
+		return camaAsignada;
+	}
+	
+	public void setCamaAsignada(int camaAsignada) {
+		
+		this.camaAsignada = camaAsignada;
+	}
+	
+	public int getNotas() {
+		
+		return notas;
+	}
+	
+	public void setNotas(int notas) {
+		
+		this.notas = notas;
+	}
+	
+	public Paciente(String nombre, Date birthday, String direccion, int estado, int sexo, String tipoDeSangre,
+			int zonaAsignada, int camaAsignada, int notas) {
+		
+		super();
+		this.nombre = nombre;
+		this.birthday = birthday;
+		this.direccion = direccion;
+		this.estado = estado;
+		this.sexo = sexo;
+		this.tipoDeSangre = tipoDeSangre;
+		this.zonaAsignada = zonaAsignada;
+		this.camaAsignada = camaAsignada;
+		this.notas = notas;
+	}
+
+	
+	
+};
