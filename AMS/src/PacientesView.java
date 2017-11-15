@@ -6,8 +6,9 @@ import java.util.Arrays;
 
 public class PacientesView extends JPanel
 
-							implements ActionListener {
+implements ActionListener {
 	
+	//Declaracion de atributos
 	private static String ALTA = "alta";
 	private static String VER = "ver";
 	private static String SUCESO = "suceso";
@@ -16,17 +17,17 @@ public class PacientesView extends JPanel
 
 	private JFrame controllingFrame;
 
-	public PacientesView(JFrame f) {
+	
+public PacientesView(JFrame f) {
 		
 		controllingFrame = f;
 		
 		JComponent buttonPane = createButtonPanel();
 		
 		add(buttonPane);
-		
-	}
+}
 	
-	protected JComponent createButtonPanel() {
+protected JComponent createButtonPanel() {
 		
 		JPanel p = new JPanel(new GridLayout(2,2));
 		JButton altaButton = new JButton("Alta de paciente");
@@ -55,14 +56,16 @@ public class PacientesView extends JPanel
 		
 		return p;
 		
-	}
+}
 	
-	public void actionPerformed(ActionEvent e) {
+public void actionPerformed(ActionEvent e) {
+	
 		String cmd = e.getActionCommand();
 		
-		
 		switch(cmd) {
+		
 		case "alta":
+			
 			//Codigo para abrir nuevo frame
 			JFrame altaFrame = new JFrame("Paciente Nuevo");
 			altaFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -72,10 +75,13 @@ public class PacientesView extends JPanel
 			altaFrame.setContentPane(newAltaPContentPane);
 			
 			
-			altaFrame.setSize(600, 400);
+			altaFrame.setSize(600, 600);
 			altaFrame.setVisible(true);
+			
 			break;
+			
 		case "ver":
+			
 			//Codigo para abrir nuevo frame
 			JFrame listaFrame = new JFrame("Pacientes");
 			listaFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -84,16 +90,19 @@ public class PacientesView extends JPanel
 			newListaPContentPane.setOpaque(true);
 			listaFrame.setContentPane(newListaPContentPane);
 			
-			
 			listaFrame.setSize(600, 400);
 			listaFrame.setVisible(true);
+			
 			break;
+			
 		case "Zonas":
 			
 			break;
+			
 		case "Enfermeras":
 			
 			break;
+			
 		case "Notificaciones":
 //			Notifications n = new Notifications(1);
 
@@ -110,7 +119,6 @@ public class PacientesView extends JPanel
 			
 		default:
 			break;
-			
 		}
 			
 	}
