@@ -61,19 +61,27 @@ public class MenuPrincipalView extends JPanel
 		switch(cmd) {
 		case "Pacientes":
 			//Codigo para ir a siguiente frame
-			PacientesView p = new PacientesView(controllingFrame);
-			controllingFrame.setContentPane(p);
+			PacientesView pView = new PacientesView(controllingFrame);
+			controllingFrame.setContentPane(pView);
 			controllingFrame.setVisible(true);
 			setVisible(false);
 			break;
 		case "Medicamentos":
-			
+			//Codigo para ir a siguiente frame
+			MedicamentosView mView = new MedicamentosView(controllingFrame);
+			controllingFrame.setContentPane(mView);
+			controllingFrame.setVisible(true);
+			setVisible(false);
 			break;
 		case "Zonas":
 			
 			break;
 		case "Enfermeras":
-			
+			//Codigo para ir a siguiente frame
+			EnfermerasView eView = new EnfermerasView(controllingFrame);
+			controllingFrame.setContentPane(eView);
+			controllingFrame.setVisible(true);
+			setVisible(false);
 			break;
 		case "Notificaciones":
 			Notifications n = new Notifications();

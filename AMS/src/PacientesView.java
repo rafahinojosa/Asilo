@@ -55,7 +55,7 @@ public class PacientesView extends JPanel
 		switch(cmd) {
 		case "alta":
 			//Codigo para abrir nuevo frame
-			JFrame altaFrame = new JFrame("Paciente");
+			JFrame altaFrame = new JFrame("Paciente Nuevo");
 			altaFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			
 			final AltaPacientesView newAltaPContentPane = new AltaPacientesView(altaFrame);
