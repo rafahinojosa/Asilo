@@ -145,7 +145,9 @@ implements ActionListener {
 			else {
 				
 				Enfermera enf = new Enfermera(nombre, fecha, direccion, sexo, zona);
-//				DBPacientes pDB = new DBPacientes();
+				DBEnfermera eDB = new DBEnfermera();
+				
+				eDB.addEnfermera(enf);
 //				pDB.addPaciente(p);
 				
 				controllingFrame.dispose();
