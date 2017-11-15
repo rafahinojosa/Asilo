@@ -12,21 +12,21 @@ public class AltaPacientesView extends JPanel
 	private JFrame controllingFrame;
 	
 	//Text Fields
-	JTextField nameText;
-	JTextField dateText;
-	JTextField anText;
+	JTextField nameText; //1
+	JTextField dateText; //2
+	JTextField añosText;
 	JTextField operacionesText;
 	JTextField padeText;
 	JTextField contactoText;
 	JTextField telText;
-	JTextField direcText;
+	JTextField direcText; //3
 	
 	//Combo box
-	JComboBox sexBox;
-	JComboBox bloodBox;
+	JComboBox sexBox; //4
+	JComboBox bloodBox; //5
 	JComboBox estadoBox;
-	JComboBox dormitorioBox;
-	JComboBox camaBox;
+	JComboBox dormitorioBox; //6
+	JComboBox camaBox; //7
 	
 	
 	
@@ -93,13 +93,13 @@ public class AltaPacientesView extends JPanel
 		operacionesPane.add(operacionesText);
 		
 		//Años de las operaciones
-		JPanel anPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		anText = new JTextField(2);
-		JLabel anLabel = new JLabel("Años: ");
+		JPanel añosPane = new JPanel(new FlowLayout(FlowLayout.CENTER));
+		añosText = new JTextField(2);
+		JLabel añosLabel = new JLabel("Años: ");
 		
-		anLabel.setLabelFor(anText);
-		anPane.add(anLabel);
-		anPane.add(anText);
+		añosLabel.setLabelFor(añosText);
+		años.add(añosLabel);
+		años.add(añosText);
 		
 		//Padecimientos del paciente
 		JPanel padePane = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -168,7 +168,7 @@ public class AltaPacientesView extends JPanel
 		add(bloodPane);
 		add(estadoPane);
 		add(operacionesPane);
-		add(anPane);
+		add(añosPane);
 		add(padePane);
 		add(contactoPane);
 		add(telPane);
