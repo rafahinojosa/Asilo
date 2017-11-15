@@ -1,0 +1,88 @@
+Select * from (java)
+https://alvinalexander.com/java/java-mysql-select-query-example
+
+Insert into (java)
+https://alvinalexander.com/java/java-mysql-insert-example-statement
+
+PRIMARY KEY QUE SE INCREMENTAN SOLAS EMPIEZAN EN 1
+Sexo:
+Male 	0
+Female 	1
+
+Tipos de sangre:
+O+	0
+O-	1
+A+	2
+A-	3
+B+	4
+B-	5
+AB+	6
+AB-	7
+
+Estado:
+Vivo	0
+Muerto	1
+
+
+En suceso
+emergencia:
+No	0
+Si	1
+
+
+Pacientes
+
+INSERT INTO paciente (Nombre,  FechaNacimiento, Direccion, Estado, Sexo, TipoDeSangre, ZonaAsignada, CamaAsignada, Notas)
+
+
+VALUES ('Toño Revolicionado', 19851021, 'Lux 200', 0, 0, 0, 1, 24, 0);
+
+
+insert into zona (camas)
+values (30);
+
+
+INSERT INTO paciente (Nombre,  FechaNacimiento, Direccion, Estado, Sexo, TipoDeSangre, ZonaAsignada, CamaAsignada, Notas)
+
+
+VALUES ('Adle Zamora', 19980821, 'Las moras 4211', 0, 1, 2, 1, 17, 0);
+
+
+
+
+INSERT INTO paciente (Nombre, FechaNacimiento, Direccion, Estado, Sexo, TipoDeSangre, ZonaAsignada, CamaAsignada, Notas)
+
+
+VALUES ('Kahjiit Wares', 15290131, 'Skyrim 901', 0, 0, 2, 1, 18, 0);
+
+
+
+INSERT INTO paciente (Nombre, FechaNacimiento, Direccion, Estado, Sexo, TipoDeSangre, ZonaAsignada, CamaAsignada, Notas)
+
+
+VALUES ('Skooma deKahjit',  15690911, 'Skyrim 903', 0, 1, 4, 2, 19, 0);
+
+
+
+INSERT INTO paciente (Nombre, FechaNacimiento, Direccion, Estado, Sexo, TipoDeSangre, ZonaAsignada, CamaAsignada, Notas)
+
+
+VALUES ('Outcasto Robato', 20171230, 'MIB 429', 0, 0, 7, 1, 3, 0);
+
+Enfermeras
+
+insert INTO enfermera (nombre, fechaNacimiento, direccion, sexo, zonaAsignada)
+VALUES ('Melissa Morales', '19761215', 'Calle 16', 1, 1);
+
+insert INTO enfermera (nombre, fechaNacimiento, direccion, sexo, zonaAsignada)
+VALUES ('Juanita Perez', '19850212', 'Calle 13', 1, 1);
+
+insert INTO enfermera (nombre, fechaNacimiento, direccion, sexo, zonaAsignada)
+VALUES ('Paola Zaragoza', '19801024', 'Avenida 303', 1, 1);
+
+insert INTO enfermera (nombre, fechaNacimiento, direccion, sexo, zonaAsignada)
+VALUES ('Carolina Castillo', '19890105', 'Juarez 405', 1, 2);
+
+insert INTO enfermera (nombre, fechaNacimiento, direccion, sexo, zonaAsignada)
+VALUES ('Dora Dominguez', '19880720', 'Privada X 193', 1, 2);
+
