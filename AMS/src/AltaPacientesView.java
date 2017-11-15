@@ -236,7 +236,7 @@ public class AltaPacientesView extends JPanel
 			else {
 				
 				Paciente p = new Paciente(nombre, fecha, sexo);
-				PacientesDB pDB = new PacientesDB();
+				DBPacientes pDB = new DBPacientes();
 				
 				try {
 					

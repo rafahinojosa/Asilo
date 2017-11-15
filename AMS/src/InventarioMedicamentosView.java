@@ -10,7 +10,7 @@ public class InventarioMedicamentosView extends JPanel
 							implements ActionListener {
 
 	private JFrame controllingFrame;
-	PacientesDB pdb = new PacientesDB();
+	DBPacientes pdb = new DBPacientes();
 	int numPacientes = pdb.getSize();
 	Vector<Paciente> pacientVector = pdb.pacientVector; 
 	

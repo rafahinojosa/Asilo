@@ -143,7 +143,7 @@ implements ActionListener {
 			else {
 				
 				Paciente p = new Paciente(nombre, fecha, sexo);
-				PacientesDB pDB = new PacientesDB();
+				DBPacientes pDB = new DBPacientes();
 				
 				try {
 					

@@ -121,6 +121,7 @@ implements ActionListener {
 				
 				JOptionPane.showMessageDialog(controllingFrame, sError);
 			} 
+		}
 
 			/*else {
 				

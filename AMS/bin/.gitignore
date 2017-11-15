@@ -32,3 +32,14 @@
 /Start.class
 /Suceso.class
 /Zona.class
+/NotaDB.class
+/DBPacientes.class
+/DBNota.class
+/DBZona.class
+/DBEnfermera.class
+/DBPadecimiento.class
+/DBOperacion.class
+/DBMedicamentos.class
+/DBMedicamento.class
+/DBSuceso.class
+/DBResponsable.class
