@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.DateFormat;
 import java.util.Arrays;
 
 
@@ -112,9 +114,10 @@ implements ActionListener {
 			
 			String error = "";
 			String nombre = "";
-			String fecha = "";
+			Date fecha = null;
 			String direccion = "";
 			int sexo = -1;
+			int zona = -1;
 			
 			if(nameText.getText().equals("")) {
 				
@@ -130,8 +133,7 @@ implements ActionListener {
 				error = error.concat("Fecha incorrecta");
 			} 
 			else {
-				
-				fecha = (dateText.getText());
+				fecha = Date.valueOf(dateText.getText());
 			}
 			
 			sexo = sexBox.getSelectedIndex();
@@ -142,18 +144,10 @@ implements ActionListener {
 			}
 			else {
 				
-				Paciente p = new Paciente(nombre, fecha, sexo);
-				DBPacientes pDB = new DBPacientes();
+				Enfermera enf = new Enfermera(nombre, fecha, direccion, sexo, zona);
+//				DBPacientes pDB = new DBPacientes();
+//				pDB.addPaciente(p);
 				
-				try {
-					
-					pDB.addPaciente(p);
-				} 
-				catch (IOException e1) {
-					
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
 				controllingFrame.dispose();
 			}
 		}

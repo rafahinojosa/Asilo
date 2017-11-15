@@ -14,11 +14,10 @@ public class Enfermera {
 		
 	}
 
-	public Enfermera(String nombre, String id, Date birthdate, String direccion, int sexo, int zonaAsignada) {
+	public Enfermera(String nombre,  Date birthdate, String direccion, int sexo, int zonaAsignada) {
 		
 		super();
 		this.nombre = nombre;
-		this.id = id;
 		this.birthdate = birthdate;
 		this.direccion = direccion;
 		this.sexo = sexo;

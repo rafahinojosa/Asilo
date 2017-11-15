@@ -237,16 +237,8 @@ public class AltaPacientesView extends JPanel
 				
 				Paciente p = new Paciente(nombre, fecha, sexo);
 				DBPacientes pDB = new DBPacientes();
+				pDB.addPaciente(p);
 				
-				try {
-					
-					pDB.addPaciente(p);
-				}
-				catch (IOException e1) {
-					
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
 				controllingFrame.dispose();
 			}
 		}
