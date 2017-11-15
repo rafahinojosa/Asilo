@@ -53,6 +53,39 @@ public class DBEnfermera {
 	
 	public void deleteEnfermera(int id) {
 		//Query para borrar algo
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver loaded!");
+		} catch (ClassNotFoundException e) {
+			throw new IllegalStateException("Cannot find the driver in the classpath!", e);
+		}
+
+		//delete method
+		try
+		{
+			// create our mysql database connection
+			String myDriver = "org.gjt.mm.mysql.Driver";
+			String myUrl = "jdbc:mysql://localhost:3306/asilo";
+			Class.forName(myDriver);
+			Connection conn = DriverManager.getConnection(myUrl, "root", "What an amazing password!");
+
+			java.sql.Statement st = conn.createStatement();
+			// our SQL SELECT query. 
+			// if you only need a few columns, specify them by name instead of using "*"
+			String query = "delete from enfermera where id_empleado = ?";
+			PreparedStatement preparedStmt = conn.prepareStatement(query);
+			preparedStmt.setInt(1, id);
+
+			// execute the preparedstatement
+			preparedStmt.execute();
+
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
 	}
 	
 	public int getSize() {
